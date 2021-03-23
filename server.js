@@ -38,10 +38,15 @@ app.get('/',(request,response)=>{
 
 app.get('/about',(request,response)=>{
     response.render('about.hbs',{
-        title : 'My First Page',
+        title : 'My First Page'
     });
 });
 
+app.get('/projects',(request,response)=>{
+    response.render('projects.hbs',{
+        title : 'My Project'
+    })
+});
 app.get('/bad',(request,response)=>{
     response.send({
         error : 'Error While Loading !!'
